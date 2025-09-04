@@ -1,9 +1,9 @@
 {
-  "name": "todo-list",
+  "name": "dropdown-menu",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://jakublepianka.github.io/todo-list",
+  "homepage": "https://jakublepianka.github.io/dropdown-menu",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",

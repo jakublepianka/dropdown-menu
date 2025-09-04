@@ -1,0 +1,382 @@
+.clear-button {
+    position: absolute;
+    right: 1.5cqw;
+    align-self: center;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    word-spacing: -2px;
+
+    transition: 
+        background-color 0.1s ease-out,
+        color 0.1s ease-out;
+
+}
+
+.clear-button:hover {
+    background-color: rgb(223, 77, 77);
+    color: #F1F2F6;
+    font-weight: 900;
+    cursor: pointer;
+
+    transition: 
+        background-color 0.1s ease-in,
+        color 0.1s ease-in;
+
+}
+
+/* 
+    clear button ^
+    ============================================================
+    project card v
+*/
+
+
+.project-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    background: #F1F2F6;
+    box-shadow: 2px 2px 15px -5px #27187E;
+    width: 90%;
+    min-width: 200px;
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+    margin: 0;
+    min-height: 60px;
+}
+
+.project-title {
+    flex: 4 1 0;
+    padding: 1rem 0.2rem;
+    margin: 0;
+}
+
+.project-expand-button, .project-open-button {
+    /* flex: 1 1 0; */
+    justify-content: center;
+    padding: 0;
+    background: none;
+    aspect-ratio: 1/1;
+    border-radius: 4rem;
+    height: 50px;
+    transition: background-color 0.2s ease-out;   
+}
+
+
+.project-expand-button:hover, .project-open-button:hover {
+    transition: background-color 0.2s ease-in;       
+    background-color: #9EC7FF;
+}
+
+.project-expand-icon {
+    width: 40px;
+    transition: 
+        transform 0.3s ease-out;
+    }
+
+.project-open-icon {
+    width: 28px;
+}
+
+.project-body {
+    display: grid;
+    overflow: hidden;
+    height: 0;
+    transition: 
+        height 0.2s ease-in-out,
+        opacity 0.5s ease-in-out;
+}
+
+.project-description-container {
+    box-sizing: border-box;
+    margin: 0;
+    overflow-wrap: break-word;
+    order: 1;
+
+}
+
+.project-description-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 3.5rem 0.3rem 2rem;
+    min-height: 36px;
+    overflow-wrap: break-word;
+}
+
+.project-description-text {
+    flex: 1 1 0;
+    margin: 0;
+    min-height: 20px;
+
+}
+
+.description-edit-button {
+    position: absolute;
+    right: 12px;
+
+    background-color: rgb(0, 0, 0, 0.17);
+    border-radius: 4rem;
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.description-edit-icon {
+    transform: translateX(0.3px) translateY(2.2px);
+    width: 18px;
+}
+
+.description-edit-button:hover {
+    background-color: #9EC7FF;
+}
+
+.description-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.2rem 0 1rem 0;
+
+}
+
+.description-form > textarea {
+    box-sizing: border-box;
+    grid-column: 1 / 3;
+    resize: vertical;
+    min-width: 268px;
+    min-height: 1.25rem;
+    height: auto;
+    padding: 4px;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-todolist-container {
+    order: 2;
+}
+
+.project-todolist {
+    padding: 0 0 0.5rem;
+}
+
+.project-todo-item {
+    
+    padding: 0.5rem 2rem;
+    margin: 0;
+}
+
+.project-todo-item-content-wrapper {
+    display: grid;
+    padding: 0.2rem 0;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 10px -5px #27187E;
+}
+
+.project-todo-item-content-wrapper#low {
+    background-color: rgb(96, 215, 245);
+}
+
+.project-todo-item-content-wrapper#medium {
+    background-color: rgb(118, 255, 113);
+}
+
+.project-todo-item-content-wrapper#high {
+    background-color: rgb(219, 189, 56);
+}
+
+.project-todo-item-content-wrapper#veryhigh {
+    background-color: rgb(240, 74, 74);
+    color: #F1F2F6;
+}
+
+.project-todo-title {
+    padding-bottom: 0.5rem;
+}
+
+.date-and-priority {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* 
+    project card ^
+    ============================================================
+    Add button v
+*/
+
+.project-add {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    color: #27187E;
+    box-shadow: 2px 2px 15px -5px #27187E;
+    width: 90%;
+    min-width: 200px;
+    min-height: 60px;
+    height: 60px;
+    margin: 0.5rem 0;
+
+
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    text-align: center;
+
+    cursor: pointer;
+
+    order: 999;
+
+    animation-name: shrink;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+}
+
+.project-add:hover {
+    animation-name: grow;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+        background: linear-gradient(90deg, #FFAE00 -700%, #9EC7FF 200%);
+    }
+    to {
+        transform: scale(1.05);
+        background: linear-gradient(90deg,#9EC7FF -100%, #FFAE00 500%);
+
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.05);
+        background: linear-gradient(90deg,#9EC7FF -100%, #FFAE00 500%);
+
+    }
+    to {
+        transform: scale(1);
+        background: linear-gradient(90deg, #FFAE00 -700%, #9EC7FF 200%);
+    }
+}
+
+
+.project-add-text {
+    font-size: 1.7rem;
+    line-height: 100%;
+}
+
+/* 
+    Add button ^
+    ============================================================
+    new project form v
+*/
+
+
+.form-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    background-color: #F1F2F6;
+    /* background: linear-gradient(180deg, #758BFD -100%, #9EC7FF 100%); */
+    box-shadow: 2px 2px 15px -5px #27187E;
+    width: 90%;
+    min-width: 200px;
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0;
+
+}
+
+.form-title {
+    padding: 1rem 0.2rem;
+    margin: 0;
+}
+
+.form-item {
+    box-sizing: border-box;
+    padding: 0.5rem 0;
+}
+
+.form-item > label {
+    padding: 1rem;
+}
+
+.form-item > input, .form-item > textarea {
+    box-sizing: border-box;
+    box-shadow: inset 0 0 3px 0px #27187E88;
+    padding: 10px;
+    resize: vertical;
+    max-width: 280px;
+    width: 290px;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.form-item > textarea {
+    min-height: 2.5rem;
+
+}
+
+.form-item > input:focus, .form-item > textarea:focus {
+    transition: box-shadow 0.2s ease-in;
+    box-shadow: inset 0 0 3px 0px #FFAE00;
+}
+
+.form-submit-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0 0.5rem 1rem;
+}
+
+.form-submit-container button {
+    font-weight: bold;
+    padding: 0.25rem 0;
+    background-color: #F1F2F6;
+    border-radius: 1rem;
+
+    transition: 
+        background-color 0.1s ease-out,
+        color 0.1s ease-out;
+}
+
+.form-submit-container button:hover {
+    background-color: #27187E ;
+    color: #FFAE00;
+    cursor: pointer;
+    transition: 
+        background-color 0.1s ease-in,
+        color 0.1s ease-in;
+
+}
+
+
+
+
+/* #27187E #758BFD 
+#9EC7FF #F1F2F6 #FFAE00 */

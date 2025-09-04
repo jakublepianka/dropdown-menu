@@ -1,3 +1,2 @@
-import { eventBus } from "./eventBus.js"
-import "./css/normalize.css"
-
+export { onClickDropdown } from "./onClickDropdown.js";
+export { onHoverDropdown } from "./onHoverDropdown.js";

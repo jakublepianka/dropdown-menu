@@ -1,6 +1,8 @@
 export function onHoverDropdown(dropdownElement) {
   const list = dropdownElement.children[1];
 
+  list.style.overflow = "hidden";
+
   dropdownElement.addEventListener("mouseover", () => {
     list.style.height = list.scrollHeight + "px";
     dropdownElement.addEventListener("mouseout", () => {
